@@ -73,7 +73,7 @@ console.log(`answer: array[0]`)
 console.log('Question 5.');
 // ----------------------------------------------------------------------------------------------------------------------
 
-
+// using the map method allowed me to simplify the function to one line of code followed by a console.log. The map method automatically loops through the whole array and creates a new one based on the parameters set. 
 
 const nameLengths = names.map(name => name.length);
 console.log(nameLengths)
@@ -81,10 +81,11 @@ console.log(nameLengths)
 // 6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
 console.log('Question 6.');
 // ----------------------------------------------------------------------------------------------------------------------
+// Using the reduce method allowed me to convert the array into one single number based on the parameters that were set. In this case, I told it to add the nameLengths values into one sum. 
 
-const nameLengthsAverage = nameLengths.reduce((a, b) => a + b, 0);
+const nameLengthsSum = nameLengths.reduce((a, b) => a + b, 0);
 console.log(names);
-console.log(nameLengthsAverage);
+console.log(nameLengthsSum);
 
 
 // ----------------------------------------------------------------------------------------------------------------------
@@ -93,6 +94,8 @@ console.log('Question 7.');
 // ----------------------------------------------------------------------------------------------------------------------
 
 const saySomething = (word, n) => {
+    // the repeat(n) method allows me to print the word as many times as I want based on the argument. 
+
    return `${word.repeat(n)}`;
 }
 console.log(saySomething('Hello ', 3)
@@ -103,7 +106,9 @@ console.log(saySomething('Hello ', 3)
 console.log('Question 8.');
 // ----------------------------------------------------------------------------------------------------------------------
 
-   
+//I used a simple fat arrow function for this one and opted to use template literal for the return  to save typing and make it easier to read. 
+
+
     let fullName = (firstName, lastName) =>{
         return `${firstName} ${lastName}`; 
     }
@@ -115,7 +120,10 @@ console.log('Question 8.');
 // 9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
 console.log('Question 9.');
 // ----------------------------------------------------------------------------------------------------------------------
-const sumTotal = [12,60,59,82].reduce((partialSum, a) => partialSum + a, 0);
+
+// I built on the solution for question 6 to find the sum. Then I created a standard if/else statement to determine if the sum was greater than 100. 
+
+const sumTotal = [12,60,59,82].reduce((a, b) => a + b, 0);
 if (sumTotal > 100){
     console.log(true);
 }   else{
@@ -131,6 +139,7 @@ console.log(sumTotal);
 console.log('Question 10.');
 // ----------------------------------------------------------------------------------------------------------------------
 
+// I used the reduce method again to find the sum, but I was also able to divide by the length of the array on the same line. This allowed me to calculate the average. 
 
 const average = (array) => array.reduce((a, b) => a + b, 0) / array.length;
     console.log(ages);
@@ -141,6 +150,9 @@ const average = (array) => array.reduce((a, b) => a + b, 0) / array.length;
 // 11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
 console.log('Question 11.');
 // ----------------------------------------------------------------------------------------------------------------------
+
+// building from the previous question, I set up the arrays, then created an if/else statement using the arrays as arguments.
+
 const array1 = [12,25,86,42];
 const array2 = [7,28,63,24]; 
 const avg = (array) => array.reduce((a, b) => a + b, 0) / array.length;
@@ -159,6 +171,7 @@ console.log(array1)
 console.log('Question 12.');
 // ----------------------------------------------------------------------------------------------------------------------
 
+// This one was a simple fat arrow function that uses an if/else statement.
 
 let willBuyDrink = (isHotOutside, moneyInPocket) =>{
     if(isHotOutside === true && moneyInPocket > 10.50){
@@ -185,7 +198,7 @@ const willWatchMovie = (positiveReviews, runTime, haveMoney) => {
     }
 }
 //Here are the arguments being added to determine the final result                      
-console.log(willWatchMovie(true,200,true))
+console.log(willWatchMovie(true,120,true))
 
 // ----------------------------------------------------------------------------------------------------------------------
 
