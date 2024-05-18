@@ -8,19 +8,21 @@
 console.log('Question 1.');
 // ----------------------------------------------------------------------------------------------------------------------
 
-//          0  1  2   3   4  5   6   7  
 let ages = [3, 9, 23, 64, 2, 8, 28, 93,];
+// ages.length-1 allows me to dynamically access the last item of the array, which I can then subtract from the first item. 
 console.log(ages[ages.length-1] - ages[0]);
+// The push method allowed me to add any number I wanted on to the end of the existing array. 
 console.log(ages.push(9));
 
 
 function averageArray(array) {
 let sum = 0;
+// This for loop prints every item that is in the new array
 for(let i = 0; i < array.length; i++){
     console.log(array[i])
-//    sum = sum + array[i]
       sum += array[i]
 }
+// math equation to determine the average
 return sum/array.length;
 }
 
@@ -34,20 +36,28 @@ console.log('Question 2.');
 // ----------------------------------------------------------------------------------------------------------------------
 
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
+// //
 
-function averageNumberOfLetters (){
+const averageNumberOfLetters =(array) =>{
 let count = 0;
+// This for loop iterates through the entire array 
 for (let i = 0; i <= names.length; i++){
 count++;
 }
-return count;}
+// returned the count iterative variable divided by the array length to determine the average. 
+return count/array.length;}
 console.log(averageNumberOfLetters (names));
 
-function concatNames (array){
+const concatNames = (array) =>{
     for (let i = 0; i <= names.length; i++){
+        // The join method using a null allows me to dynamically concatenate the new arrays while adding spaces. 
         return array.join(" ");
     }
-}console.log(concatNames(names))
+}
+console.log(concatNames(names))
+
+
+
 
 
 // //----------------------------------------------------------------------------------------------------------------------
@@ -135,7 +145,7 @@ console.log(sumTotal);
 
 // ----------------------------------------------------------------------------------------------------------------------
 
-// 10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
+// 10. Write a function that takes an array of numbers and returns the averageNumberOfLetters of all the elements in the array.
 console.log('Question 10.');
 // ----------------------------------------------------------------------------------------------------------------------
 
@@ -198,7 +208,7 @@ const willWatchMovie = (positiveReviews, runTime, haveMoney) => {
     }
 }
 //Here are the arguments being added to determine the final result                      
-console.log(willWatchMovie(true,120,true))
+console.log(willWatchMovie(true, 120, true))
 
 // ----------------------------------------------------------------------------------------------------------------------
 
